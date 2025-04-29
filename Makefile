@@ -1,20 +1,7 @@
 CMSIS_PATH   := chip-headers/CMSIS
-# Steps to flash MCU
-# make final
-# make load
-# Open second terminal
-# arm-none-eabi-gdb
-# target remote localhost:3333
-# monitor reset init
-# monitor flash write_image erase {output file name}.elf
-# monitor reset init
-# monitor resume
-# quit
-# y
-# make clean
 INCLUDES     := \
-   -I$(CMSIS_PATH)/Include \ #Path to core include files 
-   -I$(CMSIS_PATH)/Device/ST/STM32F4xx/Include # Path to CMSIS include files
+   -I$(CMSIS_PATH)/Include \
+   -I$(CMSIS_PATH)/Device/ST/STM32F4xx/Include
 
 CC = arm-none-eabi-gcc
 CFLAGS = -DSTM32F446xx -c -mcpu=cortex-m4 -mthumb -std=gnu11 $(INCLUDES)
