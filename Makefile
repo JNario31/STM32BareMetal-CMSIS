@@ -1,3 +1,4 @@
+CMSIS_PATH   := chip-headers/CMSIS
 # Steps to flash MCU
 # make final
 # make load
@@ -11,7 +12,6 @@
 # quit
 # y
 # make clean
-CMSIS_PATH   := chip-headers/CMSIS
 INCLUDES     := \
    -I$(CMSIS_PATH)/Include \ #Path to core include files 
    -I$(CMSIS_PATH)/Device/ST/STM32F4xx/Include # Path to CMSIS include files
